@@ -101,6 +101,24 @@ sfdx force:org:open
 
 ---
 
+
+## 📸 Screenshots
+
+### 1. VS Code Structure
+![VS Code Structure](screenshots/01-vscode-structure.png)
+
+### 2. LWC Working UI
+![LWC UI](screenshots/02-lwc-ui.png)
+
+### 3. Apex Class
+![Apex Class](screenshots/03-apex-class.png)
+
+### 4. Trigger
+![Trigger](screenshots/04-trigger.png)
+
+### 5. GitHub Repo
+![GitHub Repo](screenshots/05-github-repo.png)
+
 ## Future Improvements
 - Add Apex test classes for coverage
 - Improve LWC UI design
