@@ -185,7 +185,37 @@ The repository demonstrates the required Salesforce development concepts and imp
 * ✔ Source code ready for evaluation
 
 ---
+# Problem 1 – Library Book Borrowing System
 
+## Objects
+
+### Book__c
+- Title
+- Author
+- ISBN
+- Status
+- Genre
+
+### Borrowing__c
+- Book (Master Detail)
+- Due Date
+- Return Date
+
+## Validation Rules
+
+1. Due Date cannot be in the past.
+2. Cannot borrow a book already marked Borrowed.
+
+## Flows
+
+### Borrow Book Flow
+- Search Book
+- Create Borrowing
+- Update Status to Borrowed
+
+### Return Book Flow
+- When Return Date is populated
+- Update Status to Available
 ## Author
 
 GitHub: https://github.com/jvy0ti-pal89
