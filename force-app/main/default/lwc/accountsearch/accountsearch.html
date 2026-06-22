@@ -5,15 +5,28 @@
             <lightning-input
                 type="search"
                 label="Search Accounts"
-                onchange={handleSearch}>
+                placeholder="Type account name..."
+                onkeyup={handleKeyUp}>
             </lightning-input>
         </div>
 
-        <template for:each={accounts} for:item="acc">
-            <div key={acc.Id} class="slds-box slds-m-around_x-small">
-                <p><b>Name:</b> {acc.Name}</p>
-                <p><b>Industry:</b> {acc.Industry}</p>
-                <p><b>Phone:</b> {acc.Phone}</p>
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </template>
+
+        <template if:true={hasResults}>
+            <lightning-datatable
+                key-field="Id"
+                data={accounts}
+                columns={columns}
+                hide-checkbox-column
+                onrowaction={handleRowClick}>
+            </lightning-datatable>
+        </template>
+
+        <template if:true={showEmpty}>
+            <div class="slds-p-around_small slds-text-color_weak">
+                No results found
             </div>
         </template>
 
